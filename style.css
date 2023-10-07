@@ -1,0 +1,115 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: system-ui, sans-serif;
+    box-sizing: border-box;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(55, 147, 221, 0.815);
+}
+
+.card{
+    margin: 2rem;
+    text-align: center;
+}
+
+.search{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.search input{
+    outline: 0;
+    background-color: white;
+    color: black;
+    padding: 10px 25px;
+    height: 60px;
+    border: 1px solid black;
+    border-radius: 10%;
+    flex: 1;
+    margin-right: 16px;
+    font-size: 18px;
+}
+
+.search button{
+    border: 1px solid black;
+    outline: 0;
+    background-color: white;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    cursor: pointer;
+}
+
+.search button img{
+    width: 16px;
+}
+
+.search button:active{
+    transform: scale(1.01);
+    border-color: blue;
+}
+
+#currentLoc p{
+    margin: 10px;
+}
+
+#currentLoc button{
+    width: 60vw;
+    height: 8vh;
+    border: 1px solid black;
+    border-radius: 20%;
+    font-size: 90%;
+}
+
+.city{
+    margin-top: 2rem;
+}
+
+.weatherIcon{
+    width: 170px;
+}
+
+.weather h1{
+    font: 80px;
+    font-weight: 500;
+}
+
+.weather h2{
+    font: 45px;
+    font-weight: 400;
+}
+
+#description{
+    margin-bottom: 1rem;
+}
+
+.temp{
+    margin: 1rem;
+}
+
+#fahrenheit{
+    margin-bottom: 3rem;
+}
+
+.col img{
+    max-width: 70%;
+}
+
+.col:nth-child(n+2){
+    margin-top: 2rem;
+}
+
+.details{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: -2rem;
+}
+

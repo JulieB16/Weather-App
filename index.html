@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather</title>
+
+    <link href="/style.css" rel="stylesheet">
+
+</head>
+
+<body>
+    
+    <div class="card">
+        <div class="search">
+            <input type="text" id="cityInput" placeholder="enter city">
+            <button><img src="/Images/searchIcon.jfif" loading="lazy" id="searchBtn"></button>
+        </div>
+        <div id="currentLoc">
+            <p>or</p>
+            <button>Use Current Location</button>
+        </div>
+        <div class="weather">
+            <h2 class="city">Cincinnati</h2>
+            <img src="/Images/cloudyIcon.png" class="weatherIcon" loading="lazy">
+            <h2 id="description">cloudy</h2>
+            <h1 class="temp" id="celcius">22°C</h1>
+            <h1 class="temp" id="fahrenheit">22°F</h1>
+            <div class="details">
+                <div class="col">
+                    <img src="/Images/humidityIcon.png">
+                    <div>
+                        <p class="humidity">50%</p>
+                        <p>Humidity</p>
+                    </div>
+                <div class="col">
+                    <img src="/Images/windIcon.png">
+                    <div>
+                        <p class="windTxt">15mph</p>
+                        <p>Wind</p>
+                    </div>
+                </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+<script src="/script.js" defer></script>
+
+</html>
+
