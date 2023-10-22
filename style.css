@@ -56,18 +56,6 @@ body{
     border-color: blue;
 }
 
-#currentLoc p{
-    margin: 10px;
-}
-
-#currentLoc button{
-    width: 60vw;
-    height: 8vh;
-    border: 1px solid black;
-    border-radius: 20%;
-    font-size: 90%;
-}
-
 .city{
     margin-top: 2rem;
 }
