@@ -12,31 +12,27 @@
 </head>
 
 <body>
-    
+    <div class="search">
+        <input type="text" id="cityInput" placeholder="enter city">
+        <button><img src="/Images/searchIcon.jfif" loading="lazy" id="searchBtn"></button>
+    </div>
     <div class="card">
-        <div class="search">
-            <input type="text" id="cityInput" placeholder="enter city">
-            <button><img src="/Images/searchIcon.jfif" loading="lazy" id="searchBtn"></button>
-        </div>
         <div class="weather">
-            <h2 class="city">Cincinnati</h2>
+            <h1 class="city">Cincinnati</h1>
             <img src="/Images/cloudyIcon.png" class="weatherIcon" loading="lazy">
             <h2 id="description">cloudy</h2>
-            <h1 class="temp" id="celcius">22°C</h1>
-            <h1 class="temp" id="fahrenheit">22°F</h1>
+            <div class="temp">
+                <h3 id="celcius">22°C</h3>
+                <h3 id="fahrenheit">22°F</h3>
+            </div>
             <div class="details">
-                <div class="col">
-                    <img src="/Images/humidityIcon.png">
-                    <div>
-                        <p class="humidity">50%</p>
-                        <p>Humidity</p>
-                    </div>
-                <div class="col">
-                    <img src="/Images/windIcon.png">
-                    <div>
-                        <p class="windTxt">15mph</p>
-                        <p>Wind</p>
-                    </div>
+                <div class="humidity">
+                    <p>Humidity:</p>
+                    <p class="humidityNum">50%</p>
+                </div>
+                <div class="wind">
+                    <p>Wind:</p>
+                    <p class="windTxt">15mph</p>
                 </div>
                 </div>
             </div>

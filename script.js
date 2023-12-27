@@ -9,7 +9,8 @@ const fahrenheitTxt = document.querySelector("#fahrenheit");
 const descriptionTxt = document.querySelector("#description");
 const windTxt = document.querySelector(".windTxt");
 const cityTxt = document.querySelector(".city");
-const humidityTxt = document.querySelector(".humidity");
+const humidityTxt = document.querySelector(".humidityNum");
+const weatherIcon = document.querySelector(".weatherIcon")
 
 const APIkey = "f22bce010e18b972e428a4d5bb274aaf";
 
@@ -20,7 +21,8 @@ function getCity() {
     if (!cityName){
         cityName = "Cincinnati"
     };
-    const GEOCODING_API_URL = `https://api.openweathermap.org/data/2.5/weather?q=${cityName}&appid=${APIkey}`;
+    const GEOCODING_API_URL = 
+    `https://api.openweathermap.org/data/2.5/weather?q=${cityName}&appid=${APIkey}`;
 
     fetch(GEOCODING_API_URL).then(response => response.json()).then(data => {
         if(data.cod === "404"){
@@ -43,9 +45,14 @@ function getCity() {
 }
 
 searchBtn.addEventListener("click", getCity);
-
+document.addEventListener("keydown", (event) =>{
+    if(event.key === "Enter"){
+        getCity()
+    }
+})
 
 function implementData(kelvinTemp, description, meterWindSpeed, humidity){
+    descriptionPic(description)
     descriptionTxt.textContent = description;
 
     const { celcius, fahrenheit } = convertingTemp(kelvinTemp);
@@ -55,9 +62,26 @@ function implementData(kelvinTemp, description, meterWindSpeed, humidity){
     humidityTxt.textContent = `${humidity}%`;
 
     const { MphWindSpeed } = convertWindSpeed(meterWindSpeed);
-    windTxt.textContent = `${MphWindSpeed}mph`;
+    windTxt.textContent = `${MphWindSpeed} mph`;
 
 }
+
+function descriptionPic(description){
+    if(description === "Sunny") {
+        weatherIcon.src = "/Images/sunIcon.png"
+    }
+    else if(description === "Drizzle" || description === "Rain") {
+        weatherIcon.src = "/Images/rainIcon.png"
+    }
+    else if(description === "Snow") {
+        weatherIcon.src = "/Images/snowIcon.png"
+    }
+    else {
+        weatherIcon.src = "/Images/cloudyIcon.png"
+    }
+}
+
+//conversions
 
 function convertingTemp(kelvinTemp){
     let UnroundedCelcius = kelvinTemp - 273.15;

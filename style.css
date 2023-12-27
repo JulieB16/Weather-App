@@ -9,12 +9,10 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: rgba(55, 147, 221, 0.815);
-}
-
-.card{
-    margin: 2rem;
-    text-align: center;
+    flex-direction: column;
+    background: linear-gradient(in hsl, rgba(59, 59, 219, 0.822), rgb(186, 225, 226));
+    background-repeat: no-repeat;
+    overflow: hidden;
 }
 
 .search{
@@ -29,20 +27,14 @@ body{
     background-color: white;
     color: black;
     padding: 10px 25px;
+    width: 80%;
     height: 60px;
-    border: 1px solid black;
-    border-radius: 10%;
-    flex: 1;
-    margin-right: 16px;
     font-size: 18px;
 }
 
 .search button{
-    border: 1px solid black;
-    outline: 0;
     background-color: white;
-    border-radius: 50%;
-    width: 60px;
+    width: 20%;
     height: 60px;
     cursor: pointer;
 }
@@ -53,25 +45,29 @@ body{
 
 .search button:active{
     transform: scale(1.01);
-    border-color: blue;
+}
+
+.card{
+    text-align: center;
+    display: flex;
+    align-items: center;
+    padding: 2rem auto;
+    height: 100vh;
 }
 
 .city{
-    margin-top: 2rem;
+    color: black;
+    font-size: 5rem;
+    font-weight: 400;
 }
 
 .weatherIcon{
     width: 170px;
 }
 
-.weather h1{
-    font: 80px;
-    font-weight: 500;
-}
-
 .weather h2{
-    font: 45px;
-    font-weight: 400;
+    font-size: 3rem;
+    font-weight: 100;
 }
 
 #description{
@@ -79,25 +75,33 @@ body{
 }
 
 .temp{
-    margin: 1rem;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    gap: 1rem;
+    padding: 1rem 0 2rem 0;
 }
 
-#fahrenheit{
-    margin-bottom: 3rem;
-}
-
-.col img{
-    max-width: 70%;
-}
-
-.col:nth-child(n+2){
-    margin-top: 2rem;
+.temp h3{
+    font-size: 2rem;
+    font-weight: 200;
 }
 
 .details{
     display: flex;
     justify-content: space-around;
     align-items: center;
-    margin-top: -2rem;
+    flex-direction: row;
+    gap: 2rem;
+    color: black;
+    font-size: 2rem;
+    padding-bottom: 5rem;
+    font-weight: 200;
+}
+
+@media (max-width: 400px) {
+    .city{
+        font-size: 4rem;
+    }
 }
 
