@@ -76,6 +76,9 @@ function descriptionPic(description){
     else if(description === "Snow") {
         weatherIcon.src = "/Images/snowIcon.png"
     }
+    else if (description === "Windy"){
+        weatherIcon.src = "/Images/windIcon.png"
+    }
     else {
         weatherIcon.src = "/Images/cloudyIcon.png"
     }
